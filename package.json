@@ -1,0 +1,39 @@
+{
+  "name": "auto_updater",
+  "version": "1.0.2",
+  "description": "teste auto updater",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --exec electron .",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+
+  "repository": "https://github.com/guidiju/app-updater",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "autoupdater",
+    "productName": "app Autoupdater",
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+
+  "author": "agrocha",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "nodemon": "^2.0.19"
+
+  },"dependencies": {
+    "electron-updater": "^6.1.8"
+  }
+}
